@@ -5,14 +5,14 @@
         <% @curiosities.each do |curiosity| %>
           <div class="col-sm-3">
             <div class="item">
-              <%= image_tag curiosity.image_url, url: curiosity.image_url, alt: curiosity.image_text, class: "picture" %>
-              <h3>
-                <%= curiosity.name %>
-              </h3>
-              <p>
-                <%= curiosity.description %>
-              </p>
+              <%= link_to(image_tag(curiosity.image_url, alt: curiosity.image_text, class: "picture"), curiosity.image_url) %>
             </div>
+            <h3>
+              <%= curiosity.name %>
+            </h3>
+            <p>
+              <%= curiosity.description %>
+            </p>
           </div>
         <% end %>
       </div>
